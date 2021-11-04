@@ -1,0 +1,48 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "hocnode",
+  "main": "src/index.js",
+  "scripts": {
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
+    "start": "nodemon --inspect ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XuaanNam/nodejs_blog-.git"
+  },
+  "keywords": [
+    "blog",
+    "learn",
+    "nodejs",
+    "nodejs"
+  ],
+  "author": "Xuaannam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XuaanNam/nodejs_blog-/issues"
+  },
+  "homepage": "https://github.com/XuaanNam/nodejs_blog-#readme",
+
+  "lint-staged":{
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailling-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hook": {
+      "pre-commit": "lint-staged"
+    }
+  },
+
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1"
+  }
+}
