@@ -15,10 +15,10 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 //HTTP logger
-app.use(morgan('combined'));
+    app.use(morgan('combined'));
 
 //template engine
-app.engine('hbs', handlebars({    
+    app.engine("hbs", handlebars({    
     extname: '.hbs'
         }));
 app.set('view engine', 'hbs');
