@@ -1,9 +1,12 @@
-@import "variables";
+@import 'variables';
 
-h1{
+h1 {
     font-size: 1 rem;
     color: $red-color;
 }
-.search-form{
+.search-form {
     padding-top: 100px;
+}
+.card-course-item {
+    margin-top: 16px;
 }

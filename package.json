@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "prepare": "husky install",
-    "beauti": "lint-staged",
+    "pre-commit": "lint-staged",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "start": "nodemon --inspect ./src/index.js"
   },
@@ -30,7 +30,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.4"
+    "express-handlebars": "^5.3.4",
+    "mongoose": "^6.0.12"
   },
   "devDependencies": {
     "husky": "^7.0.4",
