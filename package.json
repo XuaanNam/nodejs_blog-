@@ -4,7 +4,7 @@
   "description": "hocnode",
   "main": "src/index.js",
   "scripts": {
-   
+    "beauti": "lint-staged",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "start": "nodemon --inspect ./src/index.js"
   },
@@ -33,7 +33,6 @@
       "pre-commit": "lint-staged"
     }
   },
-
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4"
