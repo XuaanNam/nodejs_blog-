@@ -4,6 +4,7 @@
   "description": "hocnode",
   "main": "src/index.js",
   "scripts": {
+    "prepare": "husky install",
     "beauti": "lint-staged",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "start": "nodemon --inspect ./src/index.js"
@@ -24,14 +25,8 @@
     "url": "https://github.com/XuaanNam/nodejs_blog-/issues"
   },
   "homepage": "https://github.com/XuaanNam/nodejs_blog-#readme",
-
-  "lint-staged":{
+  "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailling-comma all --tab-width 4 --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "dependencies": {
     "express": "^4.17.1",
