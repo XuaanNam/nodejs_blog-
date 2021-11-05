@@ -26,12 +26,14 @@
   },
   "homepage": "https://github.com/XuaanNam/nodejs_blog-#readme",
   "lint-staged": {
-    "src/**/*.{js,json,scss,hbs}": "prettier --single-quote --trailling-comma all --tab-width 4 --write"
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailling-comma all --tab-width 4 --write"
   },
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
-    "mongoose": "^6.0.12"
+    "mongoose": "^6.0.12",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
     "husky": "^7.0.4",
