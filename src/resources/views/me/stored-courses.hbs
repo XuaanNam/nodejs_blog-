@@ -2,12 +2,6 @@
     <h3>Khóa học của tôi</h3>
     <a href="/me/trash/courses"><h5>Thùng rác ({{deletedCount}})</h5></a>
     <div class="mt-4 d-flex align-items-center">
-        <div class="form-check">
-            <input class="form-check-input btn-check" type="checkbox" value="" id="checkbox-all">
-            <label class="form-check-label" for="checkbox-all">
-                Chọn tất cả
-            </label>
-        </div>
         <select class="form-select form-control-sm form-control checkbox-select-all" name="action" required>
             <option value="">--Hành động--</option>
             <option value="delete">Xóa</option>
@@ -18,11 +12,32 @@
         {{#if courses}}
             <thead>
                 <tr>
-                    <th scope="col"></th>
-                    <th scope="col">#</th>
-                    <th scope="col">Tên khóa học</th>
-                    <th scope="col">Trình độ</th>
-                    <th scope="col">Thời gian tạo</th>
+                    <th scope="col">
+                        <div class="input-group mb-3">
+                            <div >
+                                <div class="check-box mb-1 ml-4">
+                                    <input class="form-check-input btn-check" type="checkbox" value="" id="checkbox-all">
+                                </div>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        ID
+                        {{{sortable '_id' _sort}}}
+                    </th>
+                    <th scope="col">
+                        Tên khóa học
+                        {{{sortable 'name' _sort}}}
+                        
+                    </th>
+                    <th scope="col">
+                        Trình độ         
+                        {{{sortable 'level' _sort}}}
+                    </th>
+                    <th scope="col">
+                        Thời gian tạo
+                        {{{sortable 'createAt' _sort}}}
+                    </th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -35,7 +50,8 @@
                             <input class="form-check-input btn-check" type="checkbox" name="courseIds[]" value="{{this._id}}">
                         </div>
                     </td>
-                    <th scope="row">{{sum @index 1}}</th> {{!-- sum(@index, 1) hàm đã định nghĩa ở phần mở rộng helpers --}}
+                  <!--  <th scope="row">{{sum @index 1}}</th> sum(@index, 1) hàm đã định nghĩa ở phần mở rộng helpers -->
+                    <th scope="row">{{this._id}}</th>
                     <td>{{this.name}}</td>
                     <td>{{this.level}}</td>
                     <td>{{this.createdAt}}</td>
